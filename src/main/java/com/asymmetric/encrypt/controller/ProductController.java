@@ -1,31 +1,32 @@
 package com.asymmetric.encrypt.controller;
 
 import com.asymmetric.encrypt.model.Product;
+import com.asymmetric.encrypt.service.encrypt.Encryption;
 import com.asymmetric.encrypt.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import com.asymmetric.encrypt.service.encrypt.RSAEncryption;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/product")
 public class ProductController {
     
-    @Autowired
-    private ProductService productService;
+    private final ProductService productService;
     
-    @Value("${app.pass.private}")
-    private String privatePass;
-    
-    @Value("${app.pass.public}")
-    private String publicPass;
+    private final RSAEncryption rsaEncryption;
     
     @RequestMapping("/{id}")
     public ResponseEntity<Product> getProduct(@PathVariable Long id) {
-        System.err.println(privatePass);
-        System.err.println(publicPass);
+        
+        String encodedMessage = rsaEncryption.encrypt("Eu sou Cruzeiro meu pai");
+        String message = rsaEncryption.decrypt(encodedMessage);
+        System.out.println(encodedMessage);
+        System.out.println(message);
+        
         Product product = productService.findById(id);
         return ResponseEntity.ok(product);
     }
