@@ -1,6 +1,5 @@
 package com.asymmetric.encrypt.controller;
 
-import com.asymmetric.encrypt.model.Config;
 import com.asymmetric.encrypt.service.ConfigService;
 import com.asymmetric.encrypt.vo.ConfigVO;
 import com.sun.istack.NotNull;
