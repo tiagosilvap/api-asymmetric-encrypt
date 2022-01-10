@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ConfigService {
     
-    void save(ConfigVO config) throws Exception;
+    void save(ConfigVO configVO) throws Exception;
     
     ConfigVO findById(Long id) throws Exception;
     

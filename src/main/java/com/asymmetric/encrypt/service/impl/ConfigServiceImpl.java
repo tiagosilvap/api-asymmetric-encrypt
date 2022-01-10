@@ -23,10 +23,8 @@ public class ConfigServiceImpl implements ConfigService {
     
     @Override
     public void save(ConfigVO configVO) throws Exception {
-        if(configVO != null && configVO.getMessage() != null) {
-            String encodedMessage = rsaEncryption.encrypt(configVO.getMessage());
-            configRepository.save(new Config(encodedMessage));
-        }
+        String encodedMessage = rsaEncryption.encrypt(configVO.getMessage());
+        configRepository.save(new Config(encodedMessage));
     }
     
     @Override
