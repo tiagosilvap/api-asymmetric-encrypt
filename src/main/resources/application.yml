@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
 
 app:
   key:
@@ -9,7 +9,7 @@ app:
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3309/marketplace?useSSL=false
+    url: jdbc:mysql://mysqldb:3306/config?useSSL=false
     username: root
     password: admin
 
