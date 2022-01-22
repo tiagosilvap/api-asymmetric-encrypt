@@ -18,10 +18,10 @@ import java.util.Base64;
 @Service
 public class RSAEncryptionImpl implements RSAEncryption {
     
-    @Value("${app.key.private}")
+    @Value("${app.rsa_key.private}")
     private String privateKey;
     
-    @Value("${app.key.public}")
+    @Value("${app.rsa_key.public}")
     private String publicKey;
     
     @Override
