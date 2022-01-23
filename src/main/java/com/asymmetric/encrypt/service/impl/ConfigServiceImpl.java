@@ -1,6 +1,6 @@
 package com.asymmetric.encrypt.service.impl;
 
-import com.asymmetric.encrypt.model.Config;
+import com.asymmetric.encrypt.entity.Config;
 import com.asymmetric.encrypt.repository.ConfigRepository;
 import com.asymmetric.encrypt.service.ConfigService;
 import com.asymmetric.encrypt.service.RSAEncryption;

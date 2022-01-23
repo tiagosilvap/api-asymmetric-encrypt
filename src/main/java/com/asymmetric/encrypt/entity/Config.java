@@ -1,4 +1,4 @@
-package com.asymmetric.encrypt.model;
+package com.asymmetric.encrypt.entity;
 
 import lombok.Getter;
 
