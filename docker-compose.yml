@@ -16,6 +16,8 @@ services:
       MYSQL_DATABASE: config
     ports:
       - "3308:3306"
+    # volumes:
+    #   - ./db/backup:/var/lib/mysql
     networks:
       - network
   api-asymmetric-encrypt:
