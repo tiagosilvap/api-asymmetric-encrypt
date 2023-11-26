@@ -30,6 +30,8 @@ services:
     environment:
       TZ: America/Sao_Paulo
       SPRING_BOOT_ENVIRONMENT: Production
+      ASYMMETRIC_ENCRYPT_PRIVATE_KEY: ${ASYMMETRIC_ENCRYPT_PRIVATE_KEY}
+      ASYMMETRIC_ENCRYPT_PUBLIC_KEY: ${ASYMMETRIC_ENCRYPT_PUBLIC_KEY}
     volumes:
       - .:/api-asymmetric-encrypt
       - ~/.m2:/root/.m2
