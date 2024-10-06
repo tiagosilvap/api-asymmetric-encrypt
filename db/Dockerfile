@@ -1,3 +1,3 @@
-FROM mysql:5.7.22
+FROM mysql:8.0
 
 ADD config.sql /docker-entrypoint-initdb.d
