@@ -1,4 +1,4 @@
-FROM maven:3.8.1-jdk-11-slim
+FROM maven:3.8.8-eclipse-temurin-11
 
 RUN apt-get update && apt-get install -y wget
 
